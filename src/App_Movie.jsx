@@ -6,7 +6,7 @@ function App() {
   const getMovies = async () => {
     // localhost:8080 은 나중에 ALB 생성 후 DNS 로 변경 예정
     // const response = await fetch("http://localhost:8080"); 로컬에서 확인할때 사용.
-    const response = await fetch("http://kostajdh.kro.kr");
+    const response = await fetch("https://kostajdh.kro.kr/movies");
     const json = await response.json();
     setMovies(json.movies);
     setIsLoading(false);
